@@ -23,16 +23,12 @@ include <signal.h>
 
 //Should all happen within the main method.
 
-int main(int argc, char **argv){
+int main(){
   int pid, level, ppid, tpid;
   char pidStr[32], ppidStr[32], name[10];
   name = "[0,1]";
 
-//Checks to make sure arguments from the command line are correct.
-  if(argc != 1){
-    printf("Usage: problem_1\n Opens the program.\n Check the system Tree.");
-    exit(-1);
-  }
+
 // 1 at level 0 and 1 at level 1.
   pid = fork();
 
